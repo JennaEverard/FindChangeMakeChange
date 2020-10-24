@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav#navMenu
+      ul#navMenuList
+        li.navMenuItem
+          a(href="/").navMenuItemLink
+            h2 Home
+        li.navMenuItem
+          a(href="/map").navMenuItemLink
+            h2 Map
+        li.navMenuItem
+          a(href="/action").navMenuItemLink
+            h2 Actions
+        li.navMenuItem
+          a(href="/extension").navMenuItemLink
+            h2 Facts
+    block content
