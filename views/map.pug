@@ -1,3 +1,29 @@
 extends layout
 block content
-  h1 Welcome to the Map
+  .mapsidenav
+    h2 Search
+    form(action="/action_page.php")
+      label(for="zipcode") Zipcode:
+      input#zipcode(type="text" name="zipcode")
+      br
+      br
+      label(for="dist") Distance from my location (mi):
+      input#dist(type="number" name="dist")
+      br
+      br
+      label(for="date") Date:
+      input#date(type="datetime-local" name="date")
+      br
+      br
+      p Choose a cause:
+      Select
+        option(value="””") option1
+        option(value="””") option2
+        option(value="””") option3
+        option(value="””") option4
+      br
+      br
+      input(type="submit" value="Submit")
+  .map
+     iframe(width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/place/Newton+Centre,+Newton,+MA/@42.327372,-71.2156584,14z/data=!3m1!4b1!4m5!3m4!1s0x89e3827e9f7c4729:0x14c47c16044ea920!8m2!3d42.3300503!4d-71.1948255" allowfullscreen="")
+      p Use the map to find local protest for issues you care about.
