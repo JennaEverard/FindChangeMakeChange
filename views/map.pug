@@ -1,31 +1,44 @@
 extends layout
 block content
-  .mapContainer
-    .mapLeft
-      .mapSideNav
-        h2 Search for a political action near you!
-        form(action="/action_page.php")
-          label(for="zipcode") Zipcode:
-          input#zipcode(type="number" name="zipcode")
-          br
-          label(for="dist") Distance from my location (mi):
-          input#dist(type="number" name="dist")
-          br
-          label(for="date") Date:
-          input#date(type="datetime-local" name="date")
-          br
-          label(for="keyword") Keyword or cause:
-          input#keyword(type="text" name="keyword")
-          br
-          .submitButton
-          input(type="submit" value="Submit")
-    .map
-      iframe(width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/place/Newton+Centre,+Newton,+MA/@42.327372,-71.2156584,14z/data=!3m1!4b1!4m5!3m4!1s0x89e3827e9f7c4729:0x14c47c16044ea920!8m2!3d42.3300503!4d-71.1948255" allowfullscreen="")
-  .mapRight
-    .event1
-      p I am really cofused why this looks like dthis. I swear I am doing everything right. Please be nice to me computer. 
-    .event 2
-      p event 2
-    .event3
-      p event 3
-   
+  #wrapper
+    #left
+      h2 SEARCH FOR POLITICAL ACTION NEAR YOU!
+      #searchPolForm
+        form#formform(method="get", action="")
+          .inputfield
+            label City:
+            input#city(type="text")
+          .inputfield
+            label Distance From My Location:
+            input#dist(type="number")
+          .inputfield
+            label Date:
+            input#date(type="datetime-local")
+          .inputfield
+            label Cause:
+            select#selectCauseBox
+              option(value='') Select
+              option(value='/event/Climate-Change') Climate Change
+              option(value='/event/Racial-Justice') Racial Justice
+          input#mapSubmit(type="submit" value="SUBMIT")
+    #right
+      h2 EVENTS
+      #eventList
+        .eventItem
+          .eventTitle
+            h3.eventTitleText #{eventInfo[0].name}
+          h5.eventDate #{eventInfo[0].date}
+          h5.eventLoc #{eventInfo[0].loc}
+          p.eventDescription #{eventInfo[0].description}
+        .eventItem
+          .eventTitle
+            h3.eventTitleText #{eventInfo[1].name}
+          h5.eventDate #{eventInfo[1].date}
+          h5.eventLoc #{eventInfo[1].loc}
+          p.eventDescription #{eventInfo[1].description}
+
+  script.
+    document.getElementById('formform').selectCauseBox.onchange = function() {
+      var toadd = this.value;
+      document.getElementById('formform').action = toadd;
+    }  

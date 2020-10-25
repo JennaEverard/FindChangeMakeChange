@@ -47,84 +47,159 @@ a {
 	padding-bottom: 3px;
 }
 
-.mapContainer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 30%, 70%;
-  grid-template-rows: 100%;
+/* STYLING FOR MAP PAGE */
+        #wrapper {
+            background-color: #2a9d8f;
+            height: 100%;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+        #left {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+        #left h2 {
+            padding-top: 10px;
+            padding-bottom: 30px;
+            color: white;
+        }
+        #right {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+        #right h2 {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            color: white;
+        }
+        #searchPolForm {
+            width: 60%;
+            padding: 20px;
+            margin-left: 20%;
+            background-color: #e9c46a;
+            border: 5px solid white;
+        }
+        #searchPolForm input {
+            width: 100%;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin: 0;
+            margin-top: 5px;
+            border: none;
+        }
+        .inputfield {
+            margin-bottom: 30px;
+            
+        }
+        .inputfield select {
+            padding: 10px;
+            margin-left: 30px;
+            border: none;
+        }
+        #mapSubmit {
+            border: none;
+            background-color: white;
+            color: #264653;
+        }
+        #mapSubmit:hover {
+            background-color: #264653;
+            color: white;
+            cursor: pointer;
+            
+        }
+        #eventList {
+            width: 60%;
+            padding: 20px;
+            margin-left: 20%;
+            background-color: white;
+            border: 5px solid #e9c46a;
+        }
+        .eventItem {
+            text-align: left;
+            padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+            padding-bottom: 30px;
+            
+        }
+        .eventTitle {
+            font-weight: bold;
+            background-color: #e9c46a;
+            width: 98%;
+            padding: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .eventDate {
+            font-style: italic;
+        }
+        .eventDescription {
+            
+        }
+
+
+/* STYLING FOR ACTION PAGE */
+#actionDiv {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+	padding-bottom: 80px;
+	background-color: #2a9d8f;
 }
-
-.mapLeft {
-  grid-area: 1 / 1 / span 1 / span 1;
-  display: grid;
-  grid-template-columns: 30%;
-  grid-template-rows: 50%, 50%;
-  background-color: white;
-} 
-
-.mapRight {
-  grid-area: 1 / 2 / span 1 / span 1;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 33%, 33%, 33%;
+#actionTitle {
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
 }
-
-.mapSideNav {
-  grid-area: 1 / 1 / span 1 / span 1; 
-  margin-left: 10px;
+#selectStateBox {
+    border: none;
+    color: #264653;
+    padding: 3%;
+    margin-bottom: 20px;
 }
-
-.map {
-  grid-area: 2 / 1 / span 1 / span 1;
-  margin-left: 10px;
+#selectTitleDiv {
+    width: 40%;
+    margin-left: 30%;
+    background-color: #e9c46a;
+    padding: 2px;
+    text-align: center;
+    border: 7px solid white;
+    margin-bottom: -70px;
+    position: relative;
+    color: #264653;
+    font-weight: bold;
 }
-
-.event1 {
-  grid-area: 1 / 1 / span 1 / span 1;
-  padding-left: 50px;
+#infoDiv {
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 0;
+    padding-top: 90px;
+	padding-bottom: 30px;
+    text-align: center;
 }
-
-.event2 {
-  grid-area: 2 / 1 / span 1 / span 1; 
-  padding-left: 50px;
+.infoTitle {
+    color: #264653;
 }
-
-.event3 {
-  grid-area: 3 / 1 / span 1 / span 1;
-  padding-left: 50px;
+.infoResponse {
+    color: #2a9d8f;
 }
-
-input[type=number] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 8px;
-  box-sizing: border-box;
-  border: none;
-  background-color: #2A9D8F;
-  color: white;
+#submitStateChoice {
+	padding: 3%;
+	margin-left: 10px;
+	border: 1px solid white;
+	background-color: white;
+	color: #264653;
+	border-radius: 2px;
 }
-
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 8px;
-  box-sizing: border-box;
-  border: none;
-  background-color: #2A9D8F;
-  color: white;
-}
-
-input[type=datetime-local] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 8px;
-  box-sizing: border-box;
-  border: none;
-  background-color: #2A9D8F;
-  color: white;
-}
-
-submitButton {
-  background-color: #264653;
-  border-radius: 8px;
+#submitStateChoice:hover {
+	background-color: #264653;
+	color: white;
+	cursor: pointer;
+	border: 1px solid #264653;
 }
