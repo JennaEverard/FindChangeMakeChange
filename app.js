@@ -1,14 +1,23 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+//Requires
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const convertcsv = require('csvtojson');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var mapRouter = require('./routes/map');
-var actionRouter = require('./routes/action');
-var extensionRouter = require('./routes/extension');
+const mysql = require('mysql');
+const host = "localhost";
+const user = "root";
+const pass = "dbuserdbuser";
+const database = "currentcongress";
+
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const mapRouter = require('./routes/map');
+const actionRouter = require('./routes/action');
+const extensionRouter = require('./routes/extension');
+const senatorRouter = require('./routes/senator');
 
 var app = express();
 
@@ -27,6 +36,7 @@ app.use('/users', usersRouter);
 app.use('/map', mapRouter);
 app.use('/action', actionRouter);
 app.use('/extension', extensionRouter);
+app.use('/senator/:id', senatorRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -43,5 +53,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
 
 module.exports = app;

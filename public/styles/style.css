@@ -121,6 +121,20 @@ a {
 .infoResponse {
     color: #2a9d8f;
 }
+#submitStateChoice {
+	padding: 3%;
+	margin-left: 10px;
+	border: 1px solid white;
+	background-color: white;
+	color: #264653;
+	border-radius: 2px;
+}
+#submitStateChoice:hover {
+	background-color: #264653;
+	color: white;
+	cursor: pointer;
+	border: 1px solid #264653;
+}
 
 
 
