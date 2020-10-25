@@ -27,7 +27,7 @@ a {
 	float: left;
 	list-style: none;
 	width: fit-content;
-	text-align: left;
+	text-align: center;
 }
 .navMenuItem:hover .navMenuItemLink{
 	/*color: #9A8C98;*/
@@ -45,6 +45,17 @@ a {
 	/*color: #4A4E69;*/
 	color: white;
 	padding-bottom: 3px;
+}
+
+/*STYLING FOR HOME PAGE*/
+#homeDiv {
+	background-color: #2a9d8f;
+	padding-bottom:80px;
+}
+#titlegif {
+	width: 50%;
+	margin-left: 25%;
+	margin-top:60px;
 }
 
 /* STYLING FOR MAP PAGE */
