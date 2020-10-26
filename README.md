@@ -1,4 +1,4 @@
-# DivHacksVer2
+# Find Change, Make Change
 > Find Change, Make Change compiles activist resources, such as a searchable political event calendar, senator information, and a media bias tester in one place, making them easy to find and access.
 ## Inspiration
 In the age of the internet, knowledge is everywhere, yet sometimes this informational overhaul makes it harder, not easier, to actually get to what you're looking for. Jenna and Catherine have both experienced first-hand how difficult it is to find accurate, timely information about protests, bills, and other local activist and political endeavors. Thus, their goal is to make civic engagement as accessible as possible.
