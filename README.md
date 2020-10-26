@@ -8,5 +8,5 @@ Find Change, Make Change compiles diverse political resources into one simple in
 Find Change, Make Change is a Node.js/Express.js web application, with front-end code written in Pug and CSS. Javascript was used to make and then connect to a mysql database to query information about senators (originally obtained from the government's website) and events (originally obtained from Facebook).
 ## What's Next
 Find Change, Make Change will continue to develop its array of resources by gaining licensure to implement a Facebook event API, which will help us find more events to automate onto our calendar. We will also continue building our WebCrawler in order to create a media bias/fact checker, which will additionally use AI to look at news articles and point out potential fallacies. After that, we hope to spread our platform around and make Find Change, Make Change a well-known platform for organizers and activists so that these movements will become more centralized and accessible to all.
-## Updates
+## Appearances
 > Winner of the Pinterest Anti-Racism Hack Honorable Mention | Columbia DivHacks 2020
